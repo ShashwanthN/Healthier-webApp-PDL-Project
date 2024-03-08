@@ -1,19 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Login from "./pages/Login"
-import {Routes, Route} from "react-router-dom"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter
+import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
 
 const App = () => {
   return (
-    <div>
-      <Login/>
-        {/* <Routes>
-        <Route path='/Home' element={<Home />} />
-        <Route path='/Profile' element={<Profile />} />
-        </Routes> */}
-    </div>
+    <Router> 
+      <div>
+        <Routes>
+          <Route path="/" element={<Login />} /> 
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Profile" element={<Profile />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
