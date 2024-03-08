@@ -1,9 +1,8 @@
 import React from "react";
 import RunnningLogin from "../assets/RunningLogin.jpg";
 import bg from "../assets/bg3.jpg"
-import { MdOutlineDirectionsRun } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Home from "./Home";
+
 
 function Login() {
   return (
@@ -62,12 +61,12 @@ function Login() {
                 Forgot Password?
               </a>
             </div>
-            <a
+            <Link to="/Register"><div
                 className="flex pt-4 items-center justify-center font-bold text-sm text-bgTertiary hover:text-blue-darker"
                 href="#"
               >
                 Don't have and account? Create one!
-              </a>
+              </div></Link>
           </form>
          
           <p className="text-center text-divider text-xs">
