@@ -17,7 +17,7 @@ const Topbar = () => {
   return (
     <div className="w-16 min-h-[100vh] border-r border-gray-light drop-shadow-md text-bgAccent bg-bgSecondary sticky transition-colors duration-500 ease-in flex flex-col items-center justify-between">
       <div className=" text-bgAccent bg-bgSecondary sticky transition-colors duration-500 p-2 ease-in flex flex-col items-center justify-between">
-        <div className="py-4 hover:scale-110 transition-all duration-500">
+        <div className="py-4 hover:scale-110  transition-all duration-500">
           <Link to="/Home">
             <LucideHome size={35} />
           </Link>

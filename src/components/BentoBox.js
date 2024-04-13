@@ -1,6 +1,7 @@
 import React from "react";
 import Example from "./FriendsChart";
 import { ArrowUp, ArrowRight } from "lucide-react";
+import  CustomizedTables from "./Nurition";
 
 function BentoBox() {
   return (
@@ -20,13 +21,17 @@ function BentoBox() {
           </div>
         </div>
         <div className="p-6 border border-bgAccent bg-bgTertiary flex-col flex gap-1 col-span-1 row-span-1">
-          hello
+          <div></div>
         </div>
         <div className="p-6 border flex-col border-bgAccent flex gap-1 col-span-1 row-span-1">
           hello
         </div>
-        <div className="p-6 border flex-col border-bgAccent flex gap-1 col-span-2 row-span-1">
-          hello
+        <div className=" rounded-sm  border flex-col border-bgAccent flex gap-1 col-span-2 row-span-1">
+        <div><CustomizedTables/>
+        <div className="italic text-xs pl-2 pt-1 text-textSecondary">
+          *NOTE THAT THE PRICES MAY VARY
+        </div>
+        </div>
         </div>
       </section>
     </main>

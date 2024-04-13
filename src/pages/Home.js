@@ -25,8 +25,8 @@ function Home() {
           <div className="flex w-full p-6">
             <section className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               <div className="p-6 hover:scale-105 transition-transform ease-in bg-bgTertiary border-bgAccent border justify-between flex flex-col py-8 gap-1 shadow-md rounded-sm">
-                <div className="flex justify-between  text-bgPrimary items-center divide-x-2 divide-bgAccent ">
-                  <div className="flex text-2xl items-center  justify-start w-full md:text-3xl">
+                <div className="flex justify-evenly  text-bgPrimary items-center divide-x-2 divide-bgAccent ">
+                  <div className="flex text-2xl items-center justify-start w-full md:text-3xl">
                     <Flame size={35} color="#ffffff" />
                     <span className="px-4 md:px-8 ">1000</span>
                   </div>
@@ -40,8 +40,7 @@ function Home() {
                   <span className="pl-2 text-3xl md:text-4xl font-bold text-white">
                     <span className="">1743</span>
                     <span className="font-light text-lg md:text-2xl flex">
-                      steps to go today . . . . . . . . . <MdDirectionsRun /> .
-                      . . . . .
+                      steps to go today <span className="md:hidden lg:flex">. . . . . . . . . <MdDirectionsRun /> . . . . . .</span>
                     </span>
                   </span>
                 </div>
@@ -50,8 +49,9 @@ function Home() {
                 <div className="flex items-center">
                   <SunSnow size={100} />
                   <span className="text-4xl px-5 font-medium">
-                    Sun with Snow
+                    Sun with mild Snow
                     <div className="text-xl font-light"> better than yesterday!</div>
+                    <div className="text-xl font-light  underline-offset-1">Utrecht, Netherlands</div>
                   </span>
                 </div>
               </div>
