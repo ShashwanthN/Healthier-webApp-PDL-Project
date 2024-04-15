@@ -7,15 +7,15 @@ import Weather from "../components/WeatherAPi";
 
 function Home() {
   return (
-    <div className="flex flex-col md:flex-row w-full">
+    <div className="flex flex-col bg-bgPrimary md:flex-row w-full">
       <div className="md:flex hidden">
-        <Topbar />
+        <Topbar />  
       </div>
       <div className="w-full">
         <div className="flex flex-col md:flex-row justify-between w-full">
           <div className="text-5xl md:text-9xl p-4 px-10 font-bold text-bgAccent">
             Hello,{" "}
-            <div className="text-lg md:text-3xl">
+            <div className="text-lg text-bgTertiary md:text-3xl">
               Shashwanth.{" "}
               <div className="opacity-80 text-bgTertiary">
                 Great day for a walk.
@@ -27,7 +27,7 @@ function Home() {
               <div className="p-6 hover:scale-105 transition-transform ease-in bg-bgTertiary border-bgAccent border justify-between flex flex-col py-8 gap-1 shadow-md rounded-sm">
                 <div className="flex justify-evenly  text-bgPrimary items-center divide-x-2 divide-bgAccent ">
                   <div className="flex text-2xl items-center justify-start w-full md:text-3xl">
-                    <Flame size={35} color="#ffffff" />
+                    <Flame size={35} />
                     <span className="px-4 md:px-8 ">1000</span>
                   </div>
                   <div className="flex text-2xl items-center justify-end w-full md:text-3xl">
@@ -35,8 +35,8 @@ function Home() {
                     <span className="px-4 md:px-8 ">17.3</span>
                   </div>
                 </div>
-                <div className="flex mt-4">
-                  <Footprints size={35} color="#ffffff" />
+                <div className="flex mt-4 text-bgPrimary">
+                  <Footprints size={35} />
                   <span className="pl-2 text-3xl md:text-4xl font-bold text-white">
                     <span className="">1743</span>
                     <span className="font-light text-lg md:text-2xl flex">
@@ -50,8 +50,8 @@ function Home() {
                   <SunSnow size={100} />
                   <span className="text-4xl px-5 font-medium">
                     Sun with mild Snow
-                    <div className="text-xl font-light"> better than yesterday!</div>
-                    <div className="text-xl font-light  underline-offset-1">Utrecht, Netherlands</div>
+                    <div className="text-xl font-light text-bgTertiary"> better than yesterday!</div>
+                    <div className="text-xl font-light text-bgTertiary  underline-offset-1">Utrecht, Netherlands</div>
                   </span>
                 </div>
               </div>

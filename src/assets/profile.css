@@ -1,0 +1,73 @@
+.left{
+    color:black;
+    font-weight: 500;
+    font-size: 200%;
+    background-color:#f8ded8;
+    padding-bottom: 50%;
+    padding-left: 2%;
+}
+
+.username{
+    padding-left: 2%;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 210%;
+}
+.user_pic{
+    padding-top: 2%;
+    width: 20%;
+    display: inline-flex;
+    margin-left: 15%;
+}
+.labler{
+    display: flex;
+}
+.spaner{
+    color: blue;
+}
+.workdone{
+    padding-left: 2%;
+}
+.wd{
+    display: inline;
+}
+.icon{
+    display: flex;
+    font-size: 140%;
+    justify-content:space-between;
+}
+.caloriescount{
+    font-size: 200%;
+}
+.target{
+    width: 50%;
+    margin-left: 5%;
+    text-align: center;
+    margin-top: 10%;
+}
+.Tcal{
+    font-size: 150%;
+    color: black;   
+}
+.count{
+    font-size: 250%;
+    display: inline;
+}
+.Ttarget{
+    font-size: 300%;
+    text-align: center;
+    padding-top: 10%;
+}
+.Dcount{
+    color:blue;
+}
+.DCspan{
+    font-size: 40%;
+}
+.Wtarget{
+    width: 50%;
+    font-size: 150%;
+    text-align: center;
+    align-content: center;
+    font-weight: 500;
+}

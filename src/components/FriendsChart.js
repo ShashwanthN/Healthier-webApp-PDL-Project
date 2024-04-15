@@ -73,10 +73,10 @@ export default class Example extends PureComponent {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Area type="monotone" dataKey="You" stroke="#f04637" fill="#fe481b" />
-            <Area type="monotone" dataKey="Akshai" stackId="1" stroke="#fe481b" fill="#fe9980" />
-          <Area type="monotone" dataKey="Porchelvan" stackId="1" stroke="#fe481b" fill="#ffc2b3" />
-          <Area type="monotone" dataKey="Nithesh" stackId="1" stroke="#fe481b" fill="#ffebe6" />
+            <Area type="monotone" dataKey="You" stroke="#cef144" fill="#60711f" />
+            <Area type="monotone" dataKey="Akshai" stackId="1" stroke="#cef144" fill="#a2be35" />
+          <Area type="monotone" dataKey="Porchelvan" stackId="1" stroke="#cef144" fill="#c1ff47" />
+          <Area type="monotone" dataKey="Nithesh" stackId="1" stroke="#cef144" fill="#d2ff78" />
           </AreaChart>
         </ResponsiveContainer>
       </div>

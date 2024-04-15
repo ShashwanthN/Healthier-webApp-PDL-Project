@@ -1,5 +1,6 @@
 import React from "react";
 import Example from "./FriendsChart";
+import { SetTheme } from "../redux/theme";
 import { ArrowUp, ArrowRight } from "lucide-react";
 import  CustomizedTables from "./Nurition";
 
@@ -7,7 +8,7 @@ function BentoBox() {
   return (
     <main className="flex flex-col md:flex-row w-full">
       <section className="grid grid-cols-1 md:grid-cols-4 w-full gap-4">
-        <div className="p-6 border hover:scale-105 transition-transform ease-in border-bgAccent bg-bgSecondary rounded-sm flex-col flex gap-1 col-span-2 row-span-2">
+        <div className={`p-6 border border-divider hover:scale-105 transition-transform ease-in  bg-bgSecondary rounded-sm flex-col flex gap-1 col-span-2 row-span-2`}>
           <Example />
           <div className="justify-center text-bgAccent flex">
             <span className="px-8 flex">

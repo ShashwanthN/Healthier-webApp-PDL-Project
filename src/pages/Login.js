@@ -47,7 +47,7 @@ function Login() {
               </p>
             </div>
             <div className="flex items-center justify-between">
-                <Link to="/Home">
+                <Link to="/">
               <button
                 className="bg-bgAccent hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"

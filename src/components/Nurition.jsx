@@ -1,9 +1,11 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { SetTheme } from '../redux/theme';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Table from '@mui/material/Table';
+import PropTypes from 'prop-types';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
@@ -13,6 +15,23 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    background: {
+      paperDark: '#000000',
+      paperLight: '#ffffff',
+    },
+    text: {
+      primary: '#ffffff',
+      secondary: '#000000',
+    },
+    action: {
+      active: '#001E3C',
+    },
+  },
+});
 
 function createData(name, calories, fat, carbs, protein, price) {
   return {
@@ -73,7 +92,6 @@ function Row(props) {
                   <TableRow>
                     <TableCell>As of</TableCell>
                     <TableCell>Store</TableCell>
-                    {/* <TableCell align="right">Amount</TableCell> */}
                     <TableCell align="right">Total price ($)</TableCell>
                   </TableRow>
                 </TableHead>
@@ -84,7 +102,6 @@ function Row(props) {
                         {historyRow.date}
                       </TableCell>
                       <TableCell>{historyRow.customerId}</TableCell>
-                      {/* <TableCell align="right">{historyRow.amount}</TableCell> */}
                       <TableCell align="right">
                         {Math.round(historyRow.amount * row.price * 100) / 100}
                       </TableCell>
@@ -122,29 +139,44 @@ const rows = [
   createData('Bread with butter', 159, 6.0, 24, 4.0, 124),
   createData('Lasagna', 237, 9.0, 37, 4.3, 349),
   createData('Chicken soup', 262, 16.0, 24, 6.0, 245),
-  
 ];
 
 export default function CollapsibleTable() {
+  const dispatch = useDispatch();
+  const { theme: currentTheme } = useSelector((state) => state.theme);
+
+  const handleTheme = () => {
+    const themeValue = currentTheme === "light" ? "dark" : "light";
+    dispatch(SetTheme(themeValue));
+  };
+
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
-        <TableHead>
-          <TableRow>
-            <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <Row key={row.name} row={row} />
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <ThemeProvider theme={theme}>
+      <TableContainer 
+        component={Paper} 
+        sx={{ 
+          backgroundColor: theme.palette.background[currentTheme === 'light' ? 'paperLight' : 'paperDark'],
+          color: theme.palette.text[currentTheme === 'light' ? 'secondary' : 'primary'],
+        }}
+      >
+        <Table aria-label="collapsible table">
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              <TableCell>Dessert (100g serving)</TableCell>
+              <TableCell align="right">Calories</TableCell>
+              <TableCell align="right">Fat&nbsp;(g)</TableCell>
+              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+              <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <Row key={row.name} row={row} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </ThemeProvider>
   );
 }
