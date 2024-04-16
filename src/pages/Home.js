@@ -3,7 +3,6 @@ import Topbar from "../components/topbar";
 import BentoBox from "../components/BentoBox";
 import { Footprints, Flame, LucideActivitySquare, SunSnow } from "lucide-react";
 import { MdDirectionsRun } from "react-icons/md";
-import Weather from "../components/WeatherAPi";
 
 function Home() {
   return (

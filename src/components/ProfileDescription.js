@@ -8,7 +8,7 @@ function ProfileDescription() {
         Hey everyone! I'm just a regular user exploring the digital world
         and sharing my experiences along the way. Join me as I navigate
         through life, tech, and everything in between. Let's connect and
-        learn together! 🌟
+        learn together! 
       </div>
     </div>
   );

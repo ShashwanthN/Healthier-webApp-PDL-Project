@@ -5,8 +5,8 @@ function ProfileDetails() {
   const [isEditing, setIsEditing] = useState(false);
   const [gender, setGender] = useState("Male");
   const [age, setAge] = useState(19);
-  const [height, setHeight] = useState("6'12");
-  const [weight, setWeight] = useState("55");
+  const [height, setHeight] = useState(175);
+  const [weight, setWeight] = useState(55);
 
   const handleEdit = (field) => {
     setIsEditing(field);
@@ -19,7 +19,7 @@ function ProfileDetails() {
 
   const isValidWeight = (value) => {
     const weightValue = parseInt(value.replace("Kg", ""), 10);
-    return weightValue >= 20 && weightValue <= 200 && /^\d+\s?Kg$/.test(value);
+    return weightValue >= 20 && weightValue <= 200 && /^\d+$/.test(value);
   };
 
   const handleSave = (field, value) => {
