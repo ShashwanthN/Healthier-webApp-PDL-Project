@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { SetTheme } from "../redux/theme";
 import {
   FlameIcon,
-  HeartPulse,
+  Activity,
   LogOut,
+  Salad,
   LucideFlame,
   LucideHome,
   MoonStar,
@@ -13,7 +14,7 @@ import {
   User,
   Sun,
 } from "lucide-react";
-import { MdSick } from "react-icons/md";
+
 
 const Topbar = () => {
   const dispatch = useDispatch();
@@ -37,10 +38,10 @@ const Topbar = () => {
           </Link>
         </div>
         <div className="py-4 hover:scale-110 transition-all duration-500">
-          <MdSick size={33} />
+          <Salad  size={33} />
         </div>
         <div className="py-4 hover:scale-110 transition-all duration-500">
-          <HeartPulse size={35} />
+          <Activity size={35} />
         </div>
         <div className="py-4 hover:scale-110 transition-all duration-500">
           <FlameIcon size={35} />

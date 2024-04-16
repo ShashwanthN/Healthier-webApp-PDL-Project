@@ -20,7 +20,7 @@ function ProfileHeader() {
         Shashwanth N
       </div>
       <img
-        className="z-10  h-44 rounded-l-full border-2 border-divider"
+        className="z-10  h-44 rounded-l-full rounded-r-sm border-2 border-divider"
         src={user}
         alt="User"
       />

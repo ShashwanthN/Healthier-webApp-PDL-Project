@@ -1,0 +1,65 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.F_div{
+    background-color: black;
+}
+.S_div{
+    background-color: aqua;
+}
+.login{
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: start;
+    font-size: large;
+    font-weight: bold;
+}
+.email{
+    margin-left: 30px;
+    padding-top: 20px;
+   
+}   
+input{
+    height: 25px;
+    margin-top: 10px;
+    color: #f04637;
+    width: 180%;
+    height: 35px;
+    
+}
+td{
+    font-size: medium;
+}
+.submit{
+    margin-top: 30px;
+    background-color:#f04637;
+    color: aliceblue;
+    width:180%;
+    height: 35px;
+    border-radius: 3px;
+}
+.other{
+    padding-top: 30px;
+    text-align: center;
+    font-size: medium;
+}
+input{
+    padding-left: 5px;
+}
+.icons{
+    margin-top: 30px    ;
+    display: flex;
+    justify-content: space-around;
+}
+.img1{
+    margin-top: 25px;
+    margin-left: 50px;
+    height: 300px;
+}
+.loginq{
+    margin-top: 25px;
+    font-size: 200%;
+    font-weight: 500;
+    margin-left: 25px;
+}
